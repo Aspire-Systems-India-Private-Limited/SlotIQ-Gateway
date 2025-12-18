@@ -29,6 +29,13 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
+      "DownstreamPathTemplate": "/slotiq/v1/members/search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
+      "UpstreamPathTemplate": "/api/members/search",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/hiring-opportunities",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
@@ -148,11 +155,67 @@
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     },
     {
+      "DownstreamPathTemplate": "/slotiq/v1/job-descriptions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5296 } ],
+      "UpstreamPathTemplate": "/api/job-descriptions",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/slotiq/v1/job-descriptions/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5296 } ],
+      "UpstreamPathTemplate": "/api/job-descriptions/{id}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/slotiq/v1/designations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5296 } ],
+      "UpstreamPathTemplate": "/api/designations",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/slotiq/v1/designations/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5296 } ],
+      "UpstreamPathTemplate": "/api/designations/{id}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
+    },
+    {
       "DownstreamPathTemplate": "/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5296 } ],
       "UpstreamPathTemplate": "/admin-api/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/slotiq/v1/feedbacks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
+      "UpstreamPathTemplate": "/api/feedbacks",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/slotiq/v1/feedbacks/{feedbackID}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
+      "UpstreamPathTemplate": "/api/feedbacks/{feedbackID}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/slotiq/v1/feedbacks/interview/{interviewScheduleID}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
+      "UpstreamPathTemplate": "/api/feedbacks/interview/{interviewScheduleID}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/slotiq/v1/feedbacks/review",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
+      "UpstreamPathTemplate": "/api/feedbacks/review",
+      "UpstreamHttpMethod": [ "POST" ]
     }
   ],
   "GlobalConfiguration": {
