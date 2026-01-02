@@ -21,12 +21,34 @@
       "UpstreamPathTemplate": "/api/memberpanelapplicabilities/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
-    {
-      "DownstreamPathTemplate": "/slotiq/v1/members/{memberId}/availability/{everything}",
+    
+  {
+      "DownstreamPathTemplate": "/members/{memberId}/availability",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
-      "UpstreamPathTemplate": "/api/members/{memberId}/availability/{everything}",
+      "UpstreamPathTemplate": "/api/members/{memberId}/availability",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/memberpanelapplicabilitys",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
+      "UpstreamPathTemplate": "/api/memberpanelapplicabilitys",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/memberpanelapplicabilitys/{panelID}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
+      "UpstreamPathTemplate": "/api/memberpanelapplicabilitys/{panelID}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/memberpanelapplicabilitys/paged",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
+      "UpstreamPathTemplate": "/api/memberpanelapplicabilitys/paged",
+      "UpstreamHttpMethod": [ "GET" ]
     },
     {
       "DownstreamPathTemplate": "/slotiq/v1/members/search",
@@ -71,31 +93,31 @@
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/candidate-profiles",
+      "DownstreamPathTemplate": "/api/candidate-profiles",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/candidate-profiles",
+      "UpstreamPathTemplate": "/api/candidate-profiles",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/candidate-profiles/{candidateProfileID}",
+      "DownstreamPathTemplate": "/api/candidate-profiles/{candidateProfileID}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/candidate-profiles/{candidateProfileID}",
+      "UpstreamPathTemplate": "/api/candidate-profiles/{candidateProfileID}",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/interview-schedules",
+      "DownstreamPathTemplate": "/slotiq/v1/interviewSchedules",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/interview-schedules",
+      "UpstreamPathTemplate": "/api/interviewSchedules",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/interview-schedules/{interviewScheduleID}",
+      "DownstreamPathTemplate": "/slotiq/v1/interviewSchedules/{interviewScheduleID}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/interview-schedules/{interviewScheduleID}",
+      "UpstreamPathTemplate": "/api/interviewSchedules/{interviewScheduleID}",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     },
     {
@@ -155,32 +177,18 @@
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/slotiq/v1/job-descriptions",
+      "DownstreamPathTemplate": "/slotiq/v1/job-descriptions/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5296 } ],
-      "UpstreamPathTemplate": "/api/job-descriptions",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamPathTemplate": "/api/job-descriptions/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/slotiq/v1/job-descriptions/{id}",
+      "DownstreamPathTemplate": "/slotiq/v1/designations/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5296 } ],
-      "UpstreamPathTemplate": "/api/job-descriptions/{id}",
-      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
-    },
-    {
-      "DownstreamPathTemplate": "/slotiq/v1/designations",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5296 } ],
-      "UpstreamPathTemplate": "/api/designations",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
-    },
-    {
-      "DownstreamPathTemplate": "/slotiq/v1/designations/{id}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5296 } ],
-      "UpstreamPathTemplate": "/api/designations/{id}",
-      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
+      "UpstreamPathTemplate": "/api/designations/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
       "DownstreamPathTemplate": "/{everything}",
@@ -222,3 +230,4 @@
     "BaseUrl": "http://localhost:9100"
   }
 }
+ 
