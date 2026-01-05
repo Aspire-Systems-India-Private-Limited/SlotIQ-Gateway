@@ -21,34 +21,34 @@
       "UpstreamPathTemplate": "/api/memberpanelapplicabilities/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
-    
-  {
-      "DownstreamPathTemplate": "/members/{memberId}/availability",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
-      "UpstreamPathTemplate": "/api/members/{memberId}/availability",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
-    },
     {
-      "DownstreamPathTemplate": "/memberpanelapplicabilitys",
+      "DownstreamPathTemplate": "/slotiq/v1/memberpanelapplicabilitys",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
       "UpstreamPathTemplate": "/api/memberpanelapplicabilitys",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/memberpanelapplicabilitys/{panelID}",
+      "DownstreamPathTemplate": "/slotiq/v1/memberpanelapplicabilitys/{panelID}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
       "UpstreamPathTemplate": "/api/memberpanelapplicabilitys/{panelID}",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/memberpanelapplicabilitys/paged",
+      "DownstreamPathTemplate": "/slotiq/v1/memberpanelapplicabilitys/paged",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
       "UpstreamPathTemplate": "/api/memberpanelapplicabilitys/paged",
       "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/slotiq/v1/members/{memberId}/availability",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "localhost", "Port": 5000 }],
+      "UpstreamPathTemplate": "/api/members/{memberId}/availability",
+      "UpstreamHttpMethod": [ "GET",  "POST", "PUT", "DELETE" ],
+      "RouteIsCaseSensitive": false
     },
     {
       "DownstreamPathTemplate": "/slotiq/v1/members/search",
@@ -230,4 +230,5 @@
     "BaseUrl": "http://localhost:9100"
   }
 }
+ 
  
