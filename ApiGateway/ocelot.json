@@ -21,34 +21,35 @@
       "UpstreamPathTemplate": "/api/memberpanelapplicabilities/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
-    
-  {
-      "DownstreamPathTemplate": "/members/{memberId}/availability",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
-      "UpstreamPathTemplate": "/api/members/{memberId}/availability",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
-    },
     {
-      "DownstreamPathTemplate": "/memberpanelapplicabilitys",
+      "DownstreamPathTemplate": "/slotiq/v1/members/{memberId}/memberpanelapplicabilitys",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
-      "UpstreamPathTemplate": "/api/memberpanelapplicabilitys",
+      "UpstreamPathTemplate": "/api/members/{memberId}/memberpanelapplicabilitys",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/memberpanelapplicabilitys/{panelID}",
+      "DownstreamPathTemplate": "/slotiq/v1/members/{memberId}/memberpanelapplicabilitys/paged",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
-      "UpstreamPathTemplate": "/api/memberpanelapplicabilitys/{panelID}",
-      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
+      "UpstreamPathTemplate": "/api/members/{memberId}/memberpanelapplicabilitys/paged",
+      "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/memberpanelapplicabilitys/paged",
+      "DownstreamPathTemplate": "/slotiq/v1/members/{memberId}/memberpanelapplicabilitys/{panelID}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
-      "UpstreamPathTemplate": "/api/memberpanelapplicabilitys/paged",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamPathTemplate": "/api/members/{memberId}/memberpanelapplicabilitys/{panelID}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
+    },
+    
+    {
+      "DownstreamPathTemplate": "/slotiq/v1/members/{memberId}/availability",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "localhost", "Port": 5000 }],
+      "UpstreamPathTemplate": "/api/members/{memberId}/availability",
+      "UpstreamHttpMethod": [ "GET",  "POST", "PUT", "DELETE" ],
+      "RouteIsCaseSensitive": false
     },
     {
       "DownstreamPathTemplate": "/slotiq/v1/members/search",
@@ -72,24 +73,24 @@
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/interview-reschedule-requests",
+      "DownstreamPathTemplate": "/slotiq/v1/{memberId}/interview-reschedule-requests",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/interview-reschedule-requests",
+      "UpstreamPathTemplate": "/api/{memberId}/interview-reschedule-requests",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/interview-reschedule-requests/{id}",
+      "DownstreamPathTemplate": "/slotiq/v1/{memberId}/interview-reschedule-requests/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/interview-reschedule-requests/{id}",
+      "UpstreamPathTemplate": "/api/{memberId}/interview-reschedule-requests/{id}",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/interview-reschedule-requests/paged",
+      "DownstreamPathTemplate": "/slotiq/v1/{memberId}/interview-reschedule-requests/paged",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/interview-reschedule-requests/paged",
+      "UpstreamPathTemplate": "/api/{memberId}/interview-reschedule-requests/paged",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
@@ -107,17 +108,17 @@
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/slotiq/v1/interviewSchedules",
+      "DownstreamPathTemplate": "/slotiq/v1/{memberId}/interviewSchedules",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/api/interviewSchedules",
+      "UpstreamPathTemplate": "/api/{memberId}/interviewSchedules",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/slotiq/v1/interviewSchedules/{interviewScheduleID}",
+      "DownstreamPathTemplate": "/slotiq/v1/{memberId}/interviewSchedules/{interviewScheduleID}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/api/interviewSchedules/{interviewScheduleID}",
+      "UpstreamPathTemplate": "/api/{memberId}/interviewSchedules/{interviewScheduleID}",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     },
     {
@@ -198,31 +199,31 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/slotiq/v1/feedbacks",
+      "DownstreamPathTemplate": "/slotiq/v1/{memberId}/feedbacks",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/api/feedbacks",
+      "UpstreamPathTemplate": "/api/{memberId}/feedbacks",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/slotiq/v1/feedbacks/{feedbackID}",
+      "DownstreamPathTemplate": "/slotiq/v1/{memberId}/feedbacks/{feedbackID}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/api/feedbacks/{feedbackID}",
+      "UpstreamPathTemplate": "/api/{memberId}/feedbacks/{feedbackID}",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/slotiq/v1/feedbacks/interview/{interviewScheduleID}",
+      "DownstreamPathTemplate": "/slotiq/v1/{memberId}/feedbacks/interview/{interviewScheduleID}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/api/feedbacks/interview/{interviewScheduleID}",
+      "UpstreamPathTemplate": "/api/{memberId}/feedbacks/interview/{interviewScheduleID}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/slotiq/v1/feedbacks/review",
+      "DownstreamPathTemplate": "/slotiq/v1/{memberId}/feedbacks/review",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5145 } ],
-      "UpstreamPathTemplate": "/api/feedbacks/review",
+      "UpstreamPathTemplate": "/api/{memberId}/feedbacks/review",
       "UpstreamHttpMethod": [ "POST" ]
     }
   ],
