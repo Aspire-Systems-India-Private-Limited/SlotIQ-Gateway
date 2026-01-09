@@ -52,6 +52,14 @@
       "RouteIsCaseSensitive": false
     },
     {
+      "DownstreamPathTemplate": "/slotiq/v1/members/{memberId}/availability",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "localhost", "Port": 5000 }],
+      "UpstreamPathTemplate": "/api/members/{memberId}/availability",
+      "UpstreamHttpMethod": [ "GET",  "POST", "PUT", "DELETE" ],
+      "RouteIsCaseSensitive": false
+    },
+    {
       "DownstreamPathTemplate": "/slotiq/v1/members/search",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5000 } ],
@@ -231,4 +239,5 @@
     "BaseUrl": "http://localhost:9100"
   }
 }
+ 
  
